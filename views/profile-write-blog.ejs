@@ -1,0 +1,23 @@
+<html>
+<head>
+  <title>Signup</title>
+</head>
+
+<body>
+  <h1><%=email%>, Welcome to Blog Post</h1>
+  <div id="form-stu">
+
+    <form method="post" action=<%='/profile-write-blog/'+email%>>
+      <textarea name="blog" placeholder="write your blog here: "></textarea>
+      <button value="submit">Add</button>
+    </form>
+
+    <ul>
+      <% blogs.forEach(function(item){%>
+        <li><%= item%></li>
+      <%})%>
+
+    </ul>
+  </div>
+</body>
+</html>
